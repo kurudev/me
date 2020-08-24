@@ -1,0 +1,18 @@
+
+kind: pipeline
+name: slickLab
+
+environment:
+  repo: https://github.com/LineageOs/android
+  branch: lineage-17.1
+  depis: ginkgo
+  hals: y
+  dhal: 2
+steps:
+- name: tes
+  image: fr3akyphantom/droid-builder:latest
+  environment:
+    BOT_TOKEN:
+      from_secret: BOT_TOKEN
+  commands:
+  - bash sync.sh
