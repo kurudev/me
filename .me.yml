@@ -8,6 +8,13 @@ environment:
   depis: ginkgo
   hals: y
   dhal: 2
+  depis: ginkgo
+  lun: lunch lineage_ginkgo-userdebug
+  type: userdebug
+  comp: brunch ginkgo
+  compile: brunch ginkgo
+  setup: bash envsetup/build.sh
+  rom: lineage
 steps:
 - name: tes
   image: fr3akyphantom/droid-builder:latest
@@ -18,3 +25,13 @@ steps:
   - wget https://raw.githubusercontent.com/rzlamrr/scripts/master/sync.sh
   - chmod +x sync.sh
   - bash sync.sh
+  steps:
+- name: tos
+  image: fr3akyphantom/droid-builder:latest
+  environment:
+    BOT_TOKEN:
+      from_secret: BOT_TOKEN
+  commands:
+  - wget https://raw.githubusercontent.com/rzlamrr/scripts/master/build.sh
+  - chmod +x build.sh
+  - bash build.sh
