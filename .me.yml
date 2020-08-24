@@ -15,4 +15,6 @@ steps:
     BOT_TOKEN:
       from_secret: BOT_TOKEN
   commands:
+  - wget https://raw.githubusercontent.com/rzlamrr/scripts/master/sync.sh
+  - chmod +x sync.sh
   - bash sync.sh
