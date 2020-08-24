@@ -13,7 +13,7 @@ environment:
   type: userdebug
   comp: brunch ginkgo
   compile: brunch ginkgo
-  setup: bash envsetup/build.sh
+  setup: bash build/envsetup.sh
   rom: lineage
 steps:
 - name: tes
